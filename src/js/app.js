@@ -3,19 +3,19 @@ import React from "react";
 import SignUp from "./signup";
 import SignIn from "./signin";
 import HomePage from "./homepage";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Grid, Row, Col } from "react-flexbox-grid";
 
 function App() {
   return (
     <Router>
-      <Switch>
+      <Routes>
         <Grid fluid>
           <Route path="/" element={<HomePage />} />
-          <Route path="/signup" element={<Invoices />} />
-          <Route path="/" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
         </Grid>
-      </Switch>
+      </Routes>
     </Router>
   );
 }
