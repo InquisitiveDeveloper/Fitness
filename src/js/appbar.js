@@ -8,6 +8,8 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import { NavLink } from "react-router-dom";
+import styled from 'styled-components'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
+
+const Padding = styled.div`
+  padding-left: 10px
+`;
 
 const AppBarButton = () => {
   const classes = useStyles();
@@ -50,6 +56,7 @@ const AppBarButton = () => {
               SignIn
             </NavLink>
           </Button>
+          <Padding/>
           <Button color="sucess"
           variant = "contained">
             <NavLink
